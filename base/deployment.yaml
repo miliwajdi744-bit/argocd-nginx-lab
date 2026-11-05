@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: docker.io/wajdibestlab/nginx-unsigned-test:1
+          image: docker.io/wajdibestlab/nginx-signed-test@sha256:0ee3ad542a77edbf8bd220a6ad7a080134eac7b2bb123c4d4b19e06e50a1fc94
           ports:
             - containerPort: 80
