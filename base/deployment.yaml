@@ -1,8 +1,11 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
+  labels:
+    app: nginx
+    environment: dev
+    team: devops
 spec:
   replicas: 1
   selector:
@@ -12,9 +15,11 @@ spec:
     metadata:
       labels:
         app: nginx
+        environment: dev
+        team: devops
     spec:
       containers:
         - name: nginx
-          image: nginx:1.28
+          image: docker.io/wajdibestlab/nginx-unsigned-test:1
           ports:
             - containerPort: 80
